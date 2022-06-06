@@ -1,5 +1,7 @@
 import './App.css';
+import Cards from './Cards';
 import Header from './Header';
+import SwipeButton from './SwipeButton';
 
 function App() {
   return (
@@ -9,10 +11,10 @@ function App() {
       <Header />
 
       {/* FlashCards */}
-      
+      <Cards />
 
       {/* SwipeButton */}
-    
+      <SwipeButton />
 
     </div>
   );
