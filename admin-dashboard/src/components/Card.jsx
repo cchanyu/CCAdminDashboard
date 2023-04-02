@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../css/Card.css';
 
+import Chart from 'react-apexcharts';
 import { LayoutGroup, motion } from 'framer-motion';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -50,6 +51,44 @@ function CompactCard ({param, setExpanded}) {
 
 // Expanded Card
 function ExpandedCard ({param, setExpanded}) {
+
+    const data = {
+        options: {
+            chart: {
+                type: "area",
+                height: "auto",
+            },
+            dropShadow: {
+                enabled: false,
+                enabledOnSeries: undefined,
+                top: 0,
+                left: 0,
+                blur: 3,
+                color: "#000",
+                opacity: 0.35,
+            },
+            fill: {
+                colors: ["#fff"],
+                type: "gradient",
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            stroke: {
+                curve: "smooth",
+                colors: ["white"],
+            },
+            tooltip: {
+                x: {
+                    format: "dd/MM/yy HH:mm",
+                },
+            },
+            grid: {
+                show: true,
+            },
+        }
+    }
+
     return (
         <div className="ExpandedCard"
         style={{
@@ -62,7 +101,7 @@ function ExpandedCard ({param, setExpanded}) {
         </div>
         <span>{param.title}</span>
         <div className='chartContainer'>
-            Chart
+            <Chart series={param.series} type='area' options={data.options} />
         </div>
         <span>Last 24 hours</span>
 
