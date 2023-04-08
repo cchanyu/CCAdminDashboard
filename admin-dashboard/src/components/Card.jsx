@@ -27,11 +27,11 @@ function CompactCard ({param, setExpanded}) {
     const IconPng = param.png;
     return (
         <div className="compactcard"
-        style={{
-            background: param.color.backGround,
-            boxShadow: param.color.boxShadow
-        }}
-        onClick={setExpanded}
+            style={{
+                background: param.color.backGround,
+                boxShadow: param.color.boxShadow
+            }}
+            onClick={setExpanded}
         >
             <div className='radialbar'>
                 <CircularProgressbar
@@ -91,12 +91,12 @@ function ExpandedCard ({param, setExpanded}) {
 
     return (
         <div className="ExpandedCard"
-        style={{
-            background: param.color.backGround,
-            boxShadow: param.color.boxShadow,
-        }}
+            style={{
+                background: param.color.backGround,
+                boxShadow: param.color.boxShadow,
+            }}
         >
-        <div>
+        <div style={{alignSelf: 'flex-end', cursor: 'pointer', color: 'white'}}>
             <UilTimes onClick={setExpanded} />
         </div>
         <span>{param.title}</span>
