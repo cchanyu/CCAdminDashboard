@@ -8,7 +8,9 @@ import {
     UilSignOutAlt,
     UilMoneyWithdrawal,
     UilUsdSquare,
-} from '@iconscout/react-unicons'
+} from '@iconscout/react-unicons';
+
+import img1 from "../imgs/img1.png";
 
 export const SidebarData = [
     {
@@ -81,5 +83,26 @@ export const CardsData = [
                 data: [10, 25, 15, 30, 12, 15, 20],
             },
         ],
+    },
+]
+
+export const UpdatesData = [
+    {
+        img: img1,
+        name: "Andrew T.",
+        noti: "has ordered Apple Smart Watch",
+        time: "25 seconds ago",
+    },
+    {
+        img: img1,
+        name: "Megan T.",
+        noti: "has ordered Apple Smart Watch",
+        time: "35 seconds ago",
+    },
+    {
+        img: img1,
+        name: "Jason T.",
+        noti: "has ordered Apple Smart Watch",
+        time: "50 seconds ago",
     },
 ]

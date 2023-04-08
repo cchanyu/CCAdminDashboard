@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@iconscout/react-unicons": "^2.0.0",
+    "@mui/material": "^5.11.16",
     "framer-motion": "^10.8.4",
     "gh-pages": "^3.2.3",
     "react": "^18.2.0",
